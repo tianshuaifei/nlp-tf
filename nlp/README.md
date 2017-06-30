@@ -25,9 +25,6 @@ Modules
 ../util
 ..__init__.py
 ..download.py  #从ftp下载数据
-..seg_predicted.py  #分词测试
-..pos_predicted.py
-..pos_predicted_blstm.py  #词性标注测试
 ..README.md
 ```
 ####每个模块目录
@@ -44,8 +41,11 @@ Modules
 ../model                #训练模型存放目录
 .../demo
 ..__init__.py
-..seg_model_bilstm.py   #模型
-..reader.py             #读取数据
+..bilstm_model.py      #模型文件
+..bilstm_train.py      #训练
+..bilstm_predicted.py  #测试
+..data_reader.py
+..data_Config.py       #网络配置，数据配置
 ..README.md             #说明文件
 ....
 
@@ -63,11 +63,11 @@ dl.get_model(data)
 
 ```
 * 分词测试
-在zutnlp-tf/zutnlp下
+在nlp-tf/nlp/seg下
 直接运行：
 
 ```python
-python seg_predicted.py
+python blistm_predicted.py
 
 ```
 或者：
@@ -75,7 +75,7 @@ python seg_predicted.py
 #coding=utf-8
 from __future__ import unicode_literals
 
-from nlp import seg_predicted as seg
+from nlp.seg import blistm_predicted as seg
 
 word = ['我', '们', '都', '是', '好', '孩', '子','，','，']
 model=seg.load_model()
