@@ -5,4 +5,4 @@
 - dep
 - trunk
 - ner
-- sentment
+- sentiment

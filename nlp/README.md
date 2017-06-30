@@ -7,15 +7,14 @@ Modules
     * dep  依存分析 
     * ner  命名实体识别
     * trunk 组块识别 
-    * Sentiment 情感分析 
+    * sentiment 情感分析 
     * element 情感要素抽取 
 
 #### 总的目录结构
 ```shell
-/zutnlp-tf
+/nlp-tf
 ./docs      #文档目录
-./data
-./zutnlp
+./nlp
 ../element
 ../chunk
 ../dep
@@ -35,7 +34,7 @@ Modules
 例如：分词模块
 
 ```shell
-/zutnlp
+/nlp
 ./seg
 ../data                 #训练数据存放目录
 .../demo
@@ -55,10 +54,10 @@ Modules
 分词
 ========
 * 下载模型
-在zutnlp-tf/zutnlp下
+在nlp-tf/nlp下
 ```python 
 #coding=utf-8
-import zutnlp.download as dl
+import nlp.download as dl
 model="seg"
 dl.get_model(data)
 
@@ -76,7 +75,7 @@ python seg_predicted.py
 #coding=utf-8
 from __future__ import unicode_literals
 
-from zutnlp import seg_predicted as seg
+from nlp import seg_predicted as seg
 
 word = ['我', '们', '都', '是', '好', '孩', '子','，','，']
 model=seg.load_model()
