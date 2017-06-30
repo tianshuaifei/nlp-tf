@@ -60,7 +60,7 @@ Modules
 import nlp.download as dl
 model="seg"
 dl.get_model(data)
-
+暂不提供，需自己训练！！
 ```
 * 分词测试
 在nlp-tf/nlp/seg下
