@@ -12,8 +12,11 @@ Train your model
 /nlp
 ./seg
 ..__init__.py
-..seg_model_bilstm.py
-..reader.py
+..bilstm_model.py
+..bilstm_train.py
+..bilstm_predicted.py
+..data_reader.py
+..data_Config.py
 ../data
 .../demo
 ....train.dat
