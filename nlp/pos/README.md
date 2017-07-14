@@ -9,10 +9,13 @@ Train your model
 ###POS model
 #### Folder Structure
 ```shell
-/zutnlp
+/nlp
 ./pos
-..pos_model_bilstm.py
+..lstm_model.py
+..lstm_train.py
+..lstm_predicted.py
 ..reader.py
+..config.py
 ../data
 ...train.txt
 ...dev.txt
